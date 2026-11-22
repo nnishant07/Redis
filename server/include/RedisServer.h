@@ -1,0 +1,18 @@
+#ifndef REDIS_SERVER_H
+#define REDIS_SERVER_H
+
+#include <bits/stdc++.h>
+
+class RedisServer{
+    private:
+        int port;
+        int serverSocket;
+        atomic<bool>running;
+    public:
+        RedisServer(int port);
+
+        void run();
+        void shutdown();
+};
+
+#endif
